@@ -1,0 +1,38 @@
+.about-content-item {
+    max-width: rem(983);
+    @include flex(column);
+    gap: rem(2);
+    box-shadow: 0 rem(24) rem(56) rgba(157, 66, 0, 0.1);
+
+    @include mq($BREAKPOINT-LG) {
+        width: auto;
+    }
+}
+
+.about-item {
+    padding: rem(24);
+    background-color: $color-white-1;
+    border-radius: rem(20) rem(20) rem(4) rem(4);
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq($BREAKPOINT-MD) {
+        gap: rem(10);
+    }
+}
+
+.about-item-title {
+    font-size: $font-size-h5;
+    font-weight: 600;
+}
+
+.about-img {
+    width: rem(100);
+}
+
+.about-note {
+    padding: rem(24);
+    background-color: $color-white-1;
+    border-radius: rem(4) rem(4) rem(20) rem(20);
+}

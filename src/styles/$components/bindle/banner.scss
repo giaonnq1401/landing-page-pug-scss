@@ -1,0 +1,263 @@
+.banner {
+    background: url("../images/bindle/banner-bg.png") center/contain no-repeat;
+    background-size: cover;
+    padding: rem(125) rem(32) rem(87);
+
+    color: $color-white-1;
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.banner-header {
+    font-size: $font-size-h2;
+    line-height: rem(48);
+    font-weight: 700;
+    margin-bottom: rem(24);
+}
+
+.banner-text {
+    font-size: $font-size-h5;
+    line-height: rem(24);
+    margin-bottom: rem(24);
+}
+
+.banner-search {
+    height: rem(42);
+    @include flex(row);
+    align-items: center;
+    background-color: $color-white-1;
+    border-radius: rem(12);
+    box-shadow: 0 rem(4.82171) rem(5.62532) rgba(67, 83, 138, 0.06);;
+    padding: rem(14) rem(12);
+}
+
+.banner-search-icon {
+    margin-right: rem(11);
+}
+
+.banner-input {
+    border: none;
+    font-size: rem(10);
+    line-height: rem(14);
+    width: 100%;
+    
+    &::placeholder {
+        color: $color-grey-placeholder;
+    }
+}
+
+.banner-explore, .banner-picture {
+    display: none;
+}
+
+@include mq($BREAKPOINT-MD, min) {
+    .banner {
+        background: url("../images/bindle/banner-bg-tablet.png") center/contain no-repeat;
+        background-size: cover;
+        padding: rem(117) rem(57) rem(51) rem(61);
+        
+        @include flex(row);
+        justify-content: space-between;
+    }
+    
+    .banner-content {
+        position: relative;
+        width: 40%;
+        text-align: left;
+    }
+
+    .banner-header {
+        margin-top: rem(20.49);
+        margin-bottom: rem(16);
+    }
+
+    .banner-text {
+        margin-bottom: rem(29.71);
+    }
+
+    .banner-explore {
+        position: absolute;
+        z-index: 1;
+        min-width: rem(550.33);
+        background-color: $color-white-1;
+        border-radius: rem(22.33);
+        padding: rem(11) rem(11) rem(13) rem(20);
+        @include flex(row);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .banner-options {
+        @include flex (row);
+        margin: 0;
+        width: calc(75.9% - 21px);
+    }
+
+    .banner-dropdown {
+        position: relative;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .banner-dropdown:hover .content-dropdown{
+        cursor: pointer;
+        display: block;
+    }
+
+    .content-dropdown {
+        display: none;
+        position: absolute;
+        top: rem(20);
+        background-color: $color-white-1;
+        color: $color-label;
+        padding: rem(10);
+        width: 100%;
+    }
+
+    .dropdown-item {
+        font-size: rem(14);
+        line-height: rem(20);
+
+        &:hover {
+            color: $color-blue;
+            font-weight: 600;
+        }
+    }
+
+    .banner-item {
+        margin: 0 rem(28.5) 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    .banner-option-label {
+        @include flex(row);
+        gap: rem(9);
+        color: $color-label;
+    }
+
+    .explore-input {
+        font-size: rem(12);
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    .banner-btn {
+        width: rem(125);
+        border: none;
+        border-radius: rem(11);
+        padding: rem(17) rem(23);
+        background-color: $color-blue;
+        color: $color-white-1;
+        font-size: rem(12);
+        line-height: rem(16);
+        font-weight: 500;
+        width: 24.1%;
+    }
+    
+    .banner-search {
+        display: none;
+    }
+
+    .banner-picture {
+        display: block;
+        width: 55%;
+        position: relative;
+    }
+
+    .banner-pic {
+        width: 100%;
+    }
+
+    .banner-raining {
+        position: absolute;
+        right: 12.87%;
+        bottom: rem(-17);
+
+        max-width: rem(106);
+        padding: rem(12) rem(8) rem(12) rem(11);
+        background-color: $color-white-bg;
+        border-radius: rem(11);
+        color: $color-blue;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .rain-amount {
+        font-size: rem(14);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .rain-chance {
+        grid-column: 1 / 3;
+        font-size: rem(12);
+        margin-top: rem(6);
+    }
+}
+
+@include mq($BREAKPOINT-XL, min) {
+    .banner {
+        background: url("../images/bindle/banner-bg-desktop.png") center/contain no-repeat;
+        background-size: cover;
+        padding: rem(164) rem(80) rem(72) rem(79);
+    }
+
+    .banner-header {
+        font-size: rem(64);
+        line-height: rem(72);
+        margin-top: rem(36);
+        margin-bottom: rem(32);
+    }
+
+    .banner-text {
+        font-size: rem(18);
+        margin-bottom: rem(32);
+    }
+
+    .banner-explore {
+        padding: rem(15) rem(16) rem(18) rem(28);
+        border-radius: rem(30);
+        min-width: rem(774);
+    }
+
+    .banner-option-label {
+        font-size: rem(20);
+        margin-bottom: rem(8);
+    }
+
+    .explore-input {
+        font-size: rem(18);
+    }
+
+    .banner-btn {
+        padding: rem(24) rem(32);
+        font-size: rem(18);
+    }
+
+    .banner-raining {
+        right: 12.87%;
+        bottom: rem(-24);
+
+        max-width: rem(149);
+        padding: rem(20) rem(16) rem(20) rem(17);
+        border-radius: rem(16);
+    }
+
+    .rain-amount {
+        font-size: rem(20);
+        text-align: right;
+    }
+
+    .rain-chance {
+        font-size: rem(16);
+        margin-top: rem(8);
+    }
+}

@@ -1,0 +1,136 @@
+.accommodation-card {
+  @include flex(row);
+  margin-bottom: rem(28);
+  padding-bottom: rem(39);
+  border-bottom: rem(1) solid $color-greyscale;
+  position: relative;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.accommodation-img {
+  width: calc(38.9% - 35px);
+  min-width: rem(268);
+  margin-right: rem(35);
+}
+
+.img-item {
+  border-radius: rem(20);
+}
+
+.img-mobile {
+  display: none;
+}
+
+.accommodation-content {
+  width: 61.1%;
+}
+
+.accommodation-name {
+  color: $color-travelulu-default;
+  font-size: rem(24);
+  line-height: rem(38);
+  font-weight: 600;
+  letter-spacing: rem(0.75);
+  margin-right: rem(10);
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.accommodation-des {
+  font-size: rem(16);
+  line-height: rem(28);
+  letter-spacing: rem(0.75);
+  color: $color-travelulu-body;
+  width: 90%;
+}
+
+.accommodation-location {
+  font-size: rem(18);
+  line-height: rem(34);
+  font-weight: 600;
+  letter-spacing: rem(0.75);
+  color: $color-travelulu-default;
+  width: fit-content;
+
+  @include flex(row);
+  gap: rem(10);
+}
+
+.booking-btn {
+  width: rem(172);
+  position: absolute;
+  top: 0;
+  right: rem(-12);
+}
+
+.accommodation-rating {
+  margin-bottom: rem(20);
+}
+
+.star {
+  color: $color-travelulu-pink;
+  font-size: rem(22);
+  margin-right: rem(8);
+}
+
+.half-star {
+  position: relative;
+  font-size: rem(22);
+
+  &::before {
+    content: "\f005";
+    color: #e2e2e2;
+  }
+  &::after {
+    content: "\f089";
+    position: absolute;
+    left: 0;
+    color: $color-travelulu-pink;
+  }
+}
+
+@include mq($BREAKPOINT-LG) {
+  .accommodation-card {
+    @include flex(column);
+    align-items: flex-start;
+  }
+
+  .booking-btn {
+    position: static;
+  }
+
+  .accommodation-img {
+    @include flex(row);
+    overflow-x: auto;
+    min-width: 100%;
+    margin-right: 0;
+    margin-bottom: rem(22);
+  }
+
+  .img-item {
+    width: 61%;
+    min-width: rem(272);
+    margin-right: rem(20);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .img-mobile {
+    display: block;
+  }
+
+  .accommodation-content {
+    width: 100%;
+  }
+
+  .accommodation-des:last-child {
+    margin-bottom: rem(20);
+  }
+}

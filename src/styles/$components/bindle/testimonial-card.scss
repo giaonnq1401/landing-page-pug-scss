@@ -1,0 +1,55 @@
+.testimonial-img {
+    width: 100%;
+    border-radius: rem(8.52);
+}
+
+.testimonial-text {
+    position: relative;
+    margin: 0 auto;
+    @include flex(column);
+    align-items: center;
+    transform: translateY(-50%);
+    width: 82%;
+    margin: auto;
+    
+    font-size: rem(10);
+    line-height: rem(14);
+    text-align: center;
+    
+    color: $color-label;
+
+    background: rgba(255, 255, 255, 0.2);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(34.0929px);
+    padding: rem(23) rem(6) rem(11);
+    border-radius: rem(8.52);
+    
+    &::before {
+        position: absolute;
+        content: "";
+        width: rem(62);
+        height: rem(62);
+        background: url("../images/bindle/icon/icon-quotes.svg") no-repeat center top;
+        top: rem(-20);
+    }
+
+}
+
+@include mq($BREAKPOINT-MD, min) {
+    .testimonial-text {
+        font-size: rem(12);
+        line-height: rem(16);
+        font-weight: 500;
+
+        padding: rem(43) rem(18) rem(21);
+    }
+}
+
+@include mq($BREAKPOINT-XL, min) {
+    .testimonial-text {
+        font-size: rem(18);
+        line-height: rem(24);
+
+        padding: rem(54) rem(26) rem(22);
+    }
+}

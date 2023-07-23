@@ -1,0 +1,107 @@
+body {
+  font-family: $font-lato;
+  font-size: $font-size-rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+
+  &:not([src]),
+  &[src=""] {
+    display: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  font-size: inherit;
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-white-1;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.bindle-container {
+  margin: rem(72) 0 0 rem(32);
+  
+  @include mq($BREAKPOINT-MD, min) {
+    padding-left: 0;
+    margin: rem(72) auto 0;
+    width: calc(100% - 64px * 2);
+  }
+
+  @include mq($BREAKPOINT-XL, min) {
+    width: calc(100% - 112px * 2);
+  }
+}
+
+.title {
+  margin-right: rem(10);
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: rem(24);
+  color: $color-label;
+
+  @include mq($BREAKPOINT-XL, min) {
+    font-size: rem(40);
+    line-height: rem(48);
+  }
+}
+.bindle {
+  font-size: $font-size-h5;
+}
+
+.logo-bindle {
+  @include flex(row);
+  align-items: center;
+
+  @include mq($BREAKPOINT-LG, min) {
+    align-items: flex-end;
+  }
+}
+.logo {
+  @include mq($BREAKPOINT-MD, min) {
+    width: rem(54.95);
+  }
+
+  @include mq($BREAKPOINT-XL, min) {
+    width: rem(72.94);
+  }
+}
+.bindle {
+  font-size: $font-size-h5;
+
+  @include mq($BREAKPOINT-MD, min) {
+    font-size: $font-size-h3;
+  }
+
+  @include mq($BREAKPOINT-XL, min) {
+    font-size: rem(27.43);
+  }
+}

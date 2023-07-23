@@ -1,0 +1,143 @@
+.footer {
+  width: 100%;
+  background-color: $color-black-8;
+  color: $color-white-1;
+  padding-top: rem(50);
+  padding-bottom: rem(18);
+  font-size: $font-size-rem;
+}
+
+.footer-wrapper {
+  @include flex(row);
+  margin: 0 22.3% 0 21.4%;
+}
+
+.img-info {
+  margin-bottom: rem(35);
+}
+
+.content-info {
+  @include flex(column);
+  gap: rem(8);
+}
+
+.footer-features-title {
+  margin-bottom: rem(18);
+}
+
+.footer-content {
+  @include flex(row);
+  margin: 0 rem(288) 0 rem(110);
+
+  @include mq-range($BREAKPOINT-MD, $BREAKPOINT-LG) {
+    gap: rem(24);
+  }
+}
+
+.footer-features {
+  padding-left: 0;
+  display: grid;
+  margin-top: 0;
+  gap: rem(12);
+}
+
+.feature-right {
+  margin-left:  rem(96);
+}
+
+.footer-feature-item {
+  line-height: rem(24);
+}
+
+.footer-link {
+  text-decoration: none;
+  color: $color-white-1;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.features-download{
+  @include flex(column);
+  gap: rem(30);
+}
+
+.download-option {
+  display: flex;
+  justify-content: center;
+  width: rem(180);
+  height: rem(72);
+  border: rem(2) solid $color-white-1;
+  border-radius: rem(5);
+}
+
+.footer-copyright {
+  margin: rem(50) rem(24) 0;
+  border-top: rem(1) solid rgba($color-white-1, 0.6);
+  padding-top: rem(17);
+  @include flex(row);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright-options {
+  display: flex;
+  gap: rem(40);
+  padding-left: 0;
+}
+
+@include mq($BREAKPOINT-XL) {
+  .footer-wrapper {
+    margin: 0 rem(109) 0 rem(91) ;
+  }
+}
+
+@include mq($BREAKPOINT-LG) {
+  .footer-wrapper {
+    margin: 0 rem(30);
+  }
+
+  .footer-content {
+    margin: 0 rem(49);
+  }
+
+  .footer-copyright {
+    margin: rem(30) rem(24) 0;
+    padding-top: 0;
+  }
+}
+
+@include mq($BREAKPOINT-MD) {
+  .footer {
+    padding-bottom: rem(9);
+  }
+
+  .footer-wrapper {
+    @include flex(column);
+    margin: 0 rem(54);
+  }
+
+  .footer-content {
+    margin: rem(49) 0;
+    width: 100%;
+  }
+
+  .footer-features {
+    width: 50%;
+  }
+  .feature-right {
+    margin-left: rem(10);
+  }
+
+  .footer-copyright {
+    padding-top: rem(18);
+    margin: rem(62) rem(16) 0;
+    @include flex(column);
+    align-items: flex-end;
+  }
+
+  .copyright-options {
+    gap: rem(30);
+  }
+}

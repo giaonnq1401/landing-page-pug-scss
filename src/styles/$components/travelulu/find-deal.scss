@@ -1,0 +1,70 @@
+.find-deals {
+    margin-top: rem(87);
+    margin-bottom: rem(100);
+}
+
+.find-deals-title {
+    margin-bottom: rem(28);
+}
+
+.find-deals-form {
+    @include flex(row);
+    margin-left: rem(5);
+}
+
+.input-location, .input-checkin, .input-amount {
+    margin-right: rem(20);
+    width: 39.3%;
+    background: url("../images/travelulu/icons/icon-forward.svg") no-repeat;
+    background-position: 97% center;
+}
+
+.input-checkin {
+    width: 21.6%;
+    margin-right: rem(10);
+}
+
+.input-amount {
+    width: 21.6%;
+    margin-right: rem(20);
+}
+
+.find-deals-btn {
+    width: 12.9%;
+}
+
+@include mq($BREAKPOINT-XL) {
+    .input-location, .input-checkin, .input-amount {
+        width: 30%;
+        padding-left: rem(12);
+        margin-right: rem(10);
+    }
+
+    .find-deals-btn {
+        width: 20%;
+    }
+}
+
+@include mq($BREAKPOINT-MD) {
+    .find-deals {
+        padding: 0;
+        margin-top: rem(77)
+    }
+
+    .find-deals-form {
+        @include flex(column);
+        margin-left: 0;
+    }
+
+    .input-location, .input-checkin, .input-amount {
+        width: 100%;
+        margin-bottom: rem(25);
+        margin-right: 0;
+    }
+
+    .find-deals-btn {
+        width: 100%;
+        max-width: rem(421);
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,51 @@
+.banner {
+    background: url('../images/banner-bg.png') center no-repeat;
+    background-size: cover;
+    @include flex(row);
+    align-items: center;
+    width: 100%;
+    padding-top: rem(100);
+}
+
+.banner-text {
+    width: calc(50% - 332px);
+    margin: 0 auto;
+}
+
+.banner-slogan {
+    width: rem(382);
+}
+
+.banner-pic {
+    width: 50%;
+}
+
+@include mq($BREAKPOINT-XL) {
+    .banner-text {
+        width: calc(50% - 116px);
+    }
+}
+
+@include mq($BREAKPOINT-LG) {
+    .banner-slogan {
+        width: auto;
+    }
+}
+
+@include mq($BREAKPOINT-MD) {
+    .banner {
+        background: url('../images/banner-bg-mobile.png') center no-repeat;
+        background-size: cover;
+        @include flex(column);
+        padding-top: rem(172);
+    }
+
+    .banner-text {
+        width: calc(100% - 90px);
+        margin-bottom: rem(92);
+    }
+
+    .banner-slogan {
+        text-align: center;
+    }
+}

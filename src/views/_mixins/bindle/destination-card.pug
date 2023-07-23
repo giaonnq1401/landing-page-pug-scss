@@ -1,0 +1,8 @@
+mixin destination-card(values={})
+    <a href="#" class="popular-item !{values.className}">
+        <img class="popular-item-img" src=!{values.src} alt=!{values.alt} />
+        <div class="popular-item-des">
+            <h3 class="popular-location">!{values.location}</h3>
+            <span class="popular-properties">!{values.properties}</span>
+        </div>
+    </a>

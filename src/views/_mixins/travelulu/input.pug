@@ -1,0 +1,11 @@
+mixin input(values={})
+    <input class="input !{values.className}" type="!{values.type}" name="!{values.name}" placeholder="!{values.placeholder}" onfocus="!{values.onfocus}" />
+
+
+
+mixin select(values={})
+    <select class="select !{values.className}" name="!{values.name}" id="!{values.name}">
+        <option class="select-label" label="!{values.label}">
+        each item in values.option
+            <option class="select-option" value="!{item.value}">!{item.text}</option>
+    </select>

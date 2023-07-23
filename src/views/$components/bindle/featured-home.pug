@@ -1,0 +1,61 @@
+-
+    const homeData = [
+        {
+            src: "images/bindle/featured-1.png",
+            alt: "home-1",
+            rate: "4.60",
+            cmt: "280",
+            title: "Luxury 3 Bedroom Apartment at Epicentrum",
+            homeType: "Entire house",
+            location: "Florida",
+            cost: "350"
+        },
+        {
+            src: "images/bindle/featured-2.png",
+            alt: "home-2",
+            rate: "4.60",
+            cmt: "280",
+            title: "Luxury 3 Bedroom Apartment at Epicentrum",
+            homeType: "Entire house",
+            location: "Florida",
+            cost: "350"
+        },
+        {
+            src: "images/bindle/featured-3.png",
+            alt: "home-3",
+            rate: "4.60",
+            cmt: "280",
+            title: "Luxury 3 Bedroom Apartment at Epicentrum",
+            homeType: "Entire house",
+            location: "Florida",
+            cost: "350"
+        },
+        {
+            src: "images/bindle/featured-4.png",
+            alt: "home-4",
+            rate: "4.60",
+            cmt: "280",
+            title: "Luxury 3 Bedroom Apartment at Epicentrum",
+            homeType: "Entire house",
+            location: "Florida",
+            cost: "350"
+        },
+    ]
+
+<section class="bindle-container featured-home">
+    <div class="featured-home-header">
+        <div>
+            <h2 class="title featured-home-title">Featured homes recommended for you</h2>
+            <span class="featured-home-des">Because you viewed vacation homes in this city</span>
+        </div>
+
+        +button({
+            value: "Explore All",
+            className: "featured-btn"
+        })
+    </div>
+    <div class="featured-home-list">
+        each item in homeData
+            +featured-home-card(item)
+    </div>
+</section>

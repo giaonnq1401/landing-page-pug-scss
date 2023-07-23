@@ -1,0 +1,68 @@
+.features {
+    padding: rem(144) 0 rem(132);
+    @include flex(column);
+    align-items: center;
+    // gap: rem(50);
+}
+
+.features-title {
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.features-list {
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    gap: rem(30);
+    grid-template-columns: repeat(4, auto);
+
+    @include mq($BREAKPOINT-XL) {
+        grid-template-columns: repeat(3, auto);
+    }
+    
+    @include mq($BREAKPOINT-LG) {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    @include mq($BREAKPOINT-MD) {
+        grid-template-columns: auto;
+    }
+}
+
+.feature-item {
+    width: rem(241);
+    padding: rem(30) rem(40);
+    border-radius: rem(20);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(10);
+    background-color: $color-white-1;
+    box-shadow: 0 rem(24) rem(56) rgba(157, 66, 0, 0.1);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
+
+.item-text {
+    font-size: $font-size-h4;
+    font-weight: 500;
+    text-align: center;
+    color: $text-color-2;
+}
+
+.line {
+    content: ' ';
+    width: rem(93);
+    margin: rem(50) 0;
+    border-bottom: solid rem(4) $primary-color;
+}
+
+.bg-img {
+    position: absolute;
+}

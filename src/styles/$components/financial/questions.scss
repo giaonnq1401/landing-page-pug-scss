@@ -1,0 +1,93 @@
+.questions {
+    width: 100%;
+    background-color: $color-black-5;
+    margin: auto;
+    padding-top: rem(119);
+    padding-bottom: rem(117);
+}
+
+.questions-title {
+    text-align: center;
+    margin-bottom: rem(113);
+}
+
+.questions-caption {
+    color: $primary-color;
+    font-size: $font-size-h4;
+    font-weight: 500;
+    line-height: rem(30);
+}
+
+.questions-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: rem(48) rem(32);
+}
+
+.questions-item {
+    @include flex(column);
+    gap: rem(10);
+}
+
+.item-ques, .item-ans {
+    @include flex(row);
+    gap: rem(16);
+}
+
+.item-tag {
+    width: rem(32);
+    height: rem(32);
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-radius: rem(5);
+    color: $color-white-1;
+    font-size: $font-size-h4;
+}
+
+.item-ques {
+    align-items: center;
+
+    .item-tag {
+        background-color: $color-black-9;
+    }
+}
+
+.ques {
+    line-height: rem(20);
+    color: $text-color-1;
+}
+
+.item-ans {
+    .item-tag {
+        background-color: $primary-color;
+    }  
+}
+
+.ans {
+    line-height: rem(24);
+    color: $text-color-2;
+}
+
+@include mq($BREAKPOINT-LG) {
+    .questions-list {
+        grid-template-columns: auto auto;
+        gap: rem(32) rem(16);
+    }
+}
+
+@include mq($BREAKPOINT-MD) {
+    .questions-list {
+        grid-template-columns: auto;
+        gap: rem(48);
+    }
+
+    .questions-item {
+        padding: rem(24);
+    }
+    
+    .questions-title {
+        margin-bottom: rem(69);
+    }
+}

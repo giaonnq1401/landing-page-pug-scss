@@ -1,0 +1,64 @@
+<div class="search">
+    <h3 class="search-title">Search</h3>
+
+    <form class="search-form">
+        <div class="search-options">
+            <label class="search-label">Destination/property name</label>
+            +select({
+                className: "search-input",
+                name: "location",
+                label: "Gold Coast",
+                option:[
+                    {
+                        value: "newyork",
+                        text: "New York"
+                    },
+                    {
+                        value: "newyork",
+                        text: "New York"
+                    }
+                ],
+            })
+            <img class="search-icon" src="images/travelulu/icons/Search.svg" alt="checkin day" />
+        </div>
+
+        <div class="search-options">
+            <label class="search-label">Check-in date</label>
+            +input({
+                className: "search-input",
+                type: "text",
+                name: 'checkin',
+                placeholder: "Check-in date",
+                onfocus: "(this.type='date')",
+            })
+            <img class="search-icon" src="images/travelulu/icons/Calendar.svg" alt="checkin day" />
+        </div>
+        <div class="search-options">
+            <label class="search-label">Check-out date</label>
+            +input({
+                className: "search-input",
+                type: "text",
+                name: 'checkout',
+                placeholder: "Check-out date",
+                onfocus: "(this.type='date')",
+            })
+            <img class="search-icon" src="images/travelulu/icons/Calendar.svg" alt="checkin day" />
+        </div>
+        <div class="search-options">
+            <label class="search-label">Travellers</label>
+            +select({
+                className: "search-input",
+                name: "amount",
+                label: "2 adults - 0 children",
+                option:[],
+            })
+            <img class="search-icon" src="images/travelulu/icons/Profile.svg" alt="checkin day" />
+        </div>
+
+        +button({
+            className: "btn-primary search-btn",
+            type: "submit",
+            value: "Search"
+        })
+    </form>
+</div>

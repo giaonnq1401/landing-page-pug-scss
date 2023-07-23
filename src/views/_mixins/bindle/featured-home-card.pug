@@ -1,0 +1,11 @@
+mixin featured-home-card(values={})
+    <a href="#" class="featured-home-item !{values.class}">
+        <img class="featured-item-img" src=!{values.src} alt=!{values.alt} />
+        <div class="featured-item-rate">
+            <img class="rate-star" src="images/bindle/icon/icon-star.svg" alt="star" />
+            <span>!{values.rate} (!{values.cmt})</span>
+        </div>
+        <h3 class="featured-item-title">!{values.title}</h3>
+        <span class="featured-item-type">!{values.homeType} | !{values.location}</span>
+        <span class="featured-item-cost">$ !{values.cost}/ night</span>
+    </a>

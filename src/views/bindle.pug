@@ -1,0 +1,13 @@
+extends _layouts/layout-bindle
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Bindle";
+
+block container
+  include ./$components/bindle/banner
+  include ./$components/bindle/nearby
+  include ./$components/bindle/rentals
+  include ./$components/bindle/destination
+  include ./$components/bindle/featured-home
+  include ./$components/bindle/gallery
+  include ./$components/bindle/newsletter

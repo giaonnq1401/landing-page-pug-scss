@@ -1,0 +1,53 @@
+.header {
+    max-width: 1920px;
+    z-index: 1;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    width: 100%;
+    padding: rem(24) rem(32) 0;
+}
+
+.header-option {
+    @include flex(row);
+    align-items: center;
+}
+
+.header-host, .header-language {
+    display: none;
+}
+
+.header-user {
+    cursor: pointer;
+}
+
+@include mq($BREAKPOINT-MD, min) {
+    .header {
+        padding: rem(24) rem(61.93) 0;
+    }
+    .header-host{
+        display: block;
+    }
+
+    .header-language {
+        @include flex(row);
+        margin: 0 rem(24) 0 rem(32);
+        align-items: center;
+        gap: rem(8);
+        color: $color-white-1;
+        font-size: rem(12);
+        line-height: rem(18);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@include mq($BREAKPOINT-XL, min) {
+    .header {
+        padding: rem(24) rem(72) 0;
+    }
+}

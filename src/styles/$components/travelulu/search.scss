@@ -1,0 +1,62 @@
+.search {
+    background-color: $color-travelulu-purple;
+    border-radius: rem(20);
+    padding: rem(30) rem(38) rem(35) rem(35);
+    width: 34.5%;
+    margin-right: rem(37);
+}
+
+.search-title {
+    font-size: rem(24);
+    font-weight: 600;
+    line-height: rem(38);
+    letter-spacing: rem(0.75);
+    color: $color-travelulu-purple-1;
+}
+
+.search-options {
+    margin-bottom: rem(12);
+    position: relative;
+}
+
+.search-label {
+    color: $color-travelulu-greyscale-3;
+    font-size: rem(16);
+    line-height: rem(28);
+    letter-spacing: rem(0.75);
+}
+
+.search-icon {
+    position: absolute;
+    left: rem(24);
+    bottom: rem(17);
+}
+
+.search-input {
+    border: none;
+    border-radius: rem(15);
+    padding-left: rem(60);
+
+    background: $color-travelulu-greyscale-4 url("../images/travelulu/icons/icon-forward-down.svg") no-repeat;
+    background-position: 97% center;
+}
+
+.search-input .input {
+    background-color: $color-travelulu-greyscale-4;
+}
+
+.search-btn {
+    width: 100%;
+    max-width: rem(296);
+    margin: rem(27) auto 0;
+}
+
+@include mq($BREAKPOINT-XL) {
+    .search {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: rem(34);
+        background-color: $color-travelulu-purple-2;
+    }
+
+}

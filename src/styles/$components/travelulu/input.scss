@@ -1,0 +1,23 @@
+.select, .input {
+    color: $color-travelulu-title;
+    font-size: rem(16);
+    line-height: rem(28);
+    width: 100%;
+    border: rem(2) solid $color-travelulu-title;
+    border-radius: rem(16);
+    padding: rem(16) rem(22) rem(12) rem(24);
+}
+
+.input::placeholder {
+    color: $color-travelulu-title;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// select
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

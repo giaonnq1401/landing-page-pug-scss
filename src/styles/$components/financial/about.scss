@@ -1,0 +1,30 @@
+.about-wrapper {
+    width: 100%;
+    display: flex;
+    background-color: $color-black-5;
+}
+
+.about {
+    margin: auto;
+    padding-top: rem(119);
+    padding-bottom: rem(149);
+    width: calc(100% - 84px);
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: rem(88);
+}
+
+.about-caption {
+    color: $primary-color;
+    font-size: $font-size-h4;
+    font-weight: 500;
+    line-height: rem(30);
+}
+
+.about-content-list {
+    display: grid;
+    gap: rem(32);
+    justify-items: center;
+}

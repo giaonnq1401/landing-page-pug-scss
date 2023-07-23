@@ -1,0 +1,98 @@
+.footer {
+    @include flex(row);
+    margin-left: 9.72%;
+    margin-right: calc(60px - 5%);
+    margin-bottom: rem(80);
+    letter-spacing: rem(0.75);
+}
+
+.footer-info {
+    margin-right: 9.5%;
+}
+
+.footer-logo {
+    height: rem(32);
+    width: rem(102);
+    margin-bottom: rem(22);
+}
+
+.footer-info-text {
+    font-size: rem(14);
+    line-height: rem(24);
+    margin-bottom: rem(30);
+}
+
+.copy-right {
+    font-size: rem(13);
+    line-height: rem(22);
+    font-weight: 600;
+}
+
+.footer-block {
+    margin: 0 5%;
+}
+
+.footer-title {
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: rem(32);
+    color: $color-travelulu-title;
+    margin-bottom: rem(23);
+}
+
+.footer-block-content {
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $color-travelulu-label;
+    margin: 0;
+}
+
+.footer-block-item {
+    margin-bottom: rem(22);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.travelulu-email {
+    color: $color-travelulu-default;
+}
+
+.travelulu-tel{
+    color: $color-travelulu-label;
+}
+
+@include mq($BREAKPOINT-LG) {
+    .footer-info {
+        margin-right: 0;
+    }
+    
+    .footer-services, .footer-continents {
+        display: none;
+    }
+}
+
+@include mq($BREAKPOINT-MD) {
+    .footer {
+        flex-direction: column;
+        width: 87.5%;
+        margin: 0 auto rem(100);
+        text-align: center;
+    }
+    
+    .footer-logo {
+        margin: 0 auto rem(24);
+    }
+
+    .footer-info-text, .copy-right {
+        font-size: rem(16);
+        line-height: rem(28);
+        font-weight: 400;
+        color: $color-travelulu-body;
+    }
+
+    .footer-contact {
+        margin-top: rem(50);
+    }
+}

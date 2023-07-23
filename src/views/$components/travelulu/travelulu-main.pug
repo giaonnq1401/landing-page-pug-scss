@@ -1,0 +1,61 @@
+-
+    const accommodationData = [
+        {
+            src: "images/travelulu/accommodation-1.png",
+            alt: "accommodation-1",
+            name: "Maldron Hotel Newcastle",
+            des: "Newcastle City Centre, Newcastle upon Tyne 0.3km from centre",
+            location: "#",
+            locationDes: "Situated in Newcastle City Centre, Maldron Hotel features free WiFi and a private court yard.",
+            star: 4,
+            half: true,
+            href: "#"
+        },
+        {
+            src: "images/travelulu/accommodation-2.png",
+            alt: "accommodation-2",
+            name: "Estate de la Newcastle",
+            des: "Newcastle City Centre, Newcastle upon Tyne 0.1km from centre",
+            location: "#",
+            locationDes: "Situated in Newcastle City Centre, Maldron Hotel features free WiFi and a private court yard.",
+            star: 5,
+            half: false,
+            href: "#"
+        },
+        {
+            src: "images/travelulu/accommodation-3.png",
+            alt: "accommodation-3",
+            name: "Newcastle Premier Hotel",
+            des: "Newcastle City Centre, Newcastle upon Tyne 1.5km from centre",
+            location: "#",
+            locationDes: "Situated in Newcastle City Centre, Maldron Hotel features free WiFi and a private court yard.",
+            star: 3,
+            half: false,
+            href: "#"
+        },
+        {
+            src: "images/travelulu/accommodation-4.png",
+            alt: "accommodation-4",
+            name: "AirBnB Residence",
+            des: "Newcastle City Centre, Newcastle upon Tyne 2.2km from centre",
+            location: "#",
+            locationDes: "Situated in Newcastle City Centre, Maldron Hotel features free WiFi and a private court yard.",
+            star: 3,
+            half: true,
+            href: "#"
+        },
+    ]
+
+<section class="travelulu-main travelulu-container">
+    include search
+
+    <div class="travelulu-found">
+        <h3 class="travelulu-found-title">254 Properties Found</h3>
+        <div class="travelulu-accommodation">
+            each item in accommodationData
+                +accommodation-card(item)
+        </div>
+    </div>
+
+    include more-btn
+</section>

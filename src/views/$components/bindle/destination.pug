@@ -1,0 +1,42 @@
+<section class="popular">
+    <div class="popular-header">
+        <h1 class="title popular-heading">Popular Destinations</h1>
+        +button({value: "Explore All"})
+    </div>
+
+    <div class="popular-content">
+        +destination-card({
+            className: "popular-content-first",
+            src: "images/bindle/destination-1.png",
+            alt: "destination-1",
+            location: "East Coast, America",
+            properties: "146,786 properties",
+        })
+
+        <div class="popular-content-second">
+            +destination-card({
+                className: "item-small",
+                src: "images/bindle/destination-2.png",
+                alt: "destination-2",
+                location: "Chicago, America",
+                properties: "146,786 properties",
+            })
+
+            +destination-card({
+                className: "item-small",
+                src: "images/bindle/destination-3.png",
+                alt: "destination-3",
+                location: "Florida, America",
+                properties: "146,786 properties",
+            })
+
+            +destination-card({
+                className: "item-medium",
+                src: "images/bindle/destination-4.png",
+                alt: "destination-4",
+                location: "Florida, America",
+                properties: "146,786 properties",
+            })
+        </div>
+    </div>
+</section>

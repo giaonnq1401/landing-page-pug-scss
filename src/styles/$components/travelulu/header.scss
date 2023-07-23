@@ -1,0 +1,25 @@
+.header {
+    @include flex(row);
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: rem(34) rem(66) rem(33) rem(135);
+    border-bottom: rem(1) solid $color-greyscale;
+
+    background-color: $color-white-1;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    
+    @include mq($BREAKPOINT-LG) {
+        padding: rem(34) rem(67) rem(26) 9.36%;
+    }
+}
+
+.header-logo {
+    margin-right: rem(30);
+}
+
+.header-menu {
+    border: none;
+    padding: 0;
+}

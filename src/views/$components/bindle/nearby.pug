@@ -1,0 +1,49 @@
+-   
+    const nearbyData = [
+        {
+            src: "images/bindle/nearby-1.png",
+            alt: "nearby-1",
+            location: "Florida",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/nearby-4.png",
+            alt: "nearby-4",
+            location: "Chicago",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/nearby-2.png",
+            alt: "nearby-2",
+            location: "Texas",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/nearby-5.png",
+            alt: "nearby-5",
+            location: "New York",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/nearby-3.png",
+            alt: "nearby-3",
+            location: "Miami",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/nearby-6.png",
+            alt: "nearby-6",
+            location: "Toronto",
+            properties: "156,786 properties"
+        },
+    ]
+
+<section class="bindle-container nearby">
+    <h2 class="title nearby-title">Nearby stays</h2>
+    <p class="nearby-description">Because you viewed vacation homes in this city</p>
+
+    <div class="nearby-items">
+        each item in nearbyData
+            +nearby-card(item)
+    </div>
+</section>

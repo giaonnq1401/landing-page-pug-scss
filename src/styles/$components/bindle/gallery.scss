@@ -1,0 +1,136 @@
+.gallery-title {
+    margin-bottom: rem(16);
+}
+
+.gallery-slider {
+    margin-bottom: rem(40);
+    max-width: rem(156);
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+
+    font-size: rem(12);
+    line-height: rem(16);
+    font-weight: 500;
+}
+
+.slider-selected {
+    color: $color-label !important;
+}
+
+.slider-option {
+    color: $color-neutral;
+    cursor: pointer;
+}
+
+.slider-bar {
+    position: relative;
+    grid-column: 1 / 3;
+    content: "";
+    width: 100%;
+    height: rem(5.58);
+    border-radius: rem(10);
+    margin-top: rem(10.94);
+    cursor: pointer;
+    background-color: $color-neutral-400;
+    
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 37%;
+        height: rem(5.58);
+        border-radius: rem(10);
+        background-color:  $color-blue-1;
+    }
+}
+
+.gallery-content-full{
+    overflow-x: auto;
+}
+
+.gallery-content {
+    @include flex(row);
+    min-width: rem(546);
+    width: 100%;
+    margin: 0 rem(-4.5);
+}
+
+.gallery-content-block {
+    margin: 0 rem(4.5);
+}
+
+.first-card {
+    max-width: 40.6%;
+}
+
+.second-card {
+    max-width: 25.4%;
+}
+
+.third-card {
+    max-width: 34%;
+}
+
+.gallery-img {
+    width: 100%;
+    cursor: pointer;
+
+
+    &:first-child {
+        margin-bottom: rem(9);
+    }
+}
+
+@include mq($BREAKPOINT-MD, min) {
+    .gallery-title {
+        margin-bottom: rem(22);
+    }
+
+    .gallery-content {
+        margin: 0 rem(-7);
+    }
+    
+    .gallery-content-block {
+        margin: 0 rem(7);
+    }
+    
+    .gallery-img:first-child {
+        margin-bottom: rem(14);
+    }
+}
+
+@include mq($BREAKPOINT-XL, min) {
+    .gallery-title {
+        margin-bottom: rem(32);
+    }
+
+    .gallery-slider {
+        font-size: rem(18);
+        line-height: rem(24);
+        max-width: rem(224);
+    }
+
+    .slider-bar {
+        height: rem(8);
+        border-radius: rem(10);
+        margin-top: rem(15);
+        
+        &::before {
+            height: rem(8);
+            border-radius: rem(10);
+        }
+    }
+    .gallery-content {
+        margin: 0 rem(-10);
+    }
+
+    .gallery-content-block {
+        margin: 0 rem(10);
+    }
+
+    .gallery-img:first-child {
+        margin-bottom: rem(20);
+    }
+}

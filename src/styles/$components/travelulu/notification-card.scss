@@ -1,0 +1,45 @@
+.notify-card {
+    @include flex(row);
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(14) rem(24) rem(14) rem(26);
+    border-radius: rem(16);
+    min-height: rem(84);
+    margin-bottom: rem(27);
+}
+
+.notify-card-content {
+    @include flex(row);
+    width: 91.4%;
+    gap: rem(17);
+    margin-right: rem(24);
+}
+
+.thumbs-up {
+    border: rem(2) solid $color-travelulu-success;
+    color: $color-travelulu-success;
+}
+
+.alert {
+    border: rem(2) solid $color-travelulu-pink;
+    color: $color-travelulu-pink;
+}
+
+.notify-text {
+    width: 89.7%;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: rem(22);
+    letter-spacing: rem(0.25);
+}
+
+.notify-close:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+@include mq($BREAKPOINT-MD) {
+    .notify-card-content{
+        align-items: flex-start;
+    }
+}

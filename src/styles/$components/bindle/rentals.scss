@@ -1,0 +1,70 @@
+.rentals-title {
+    margin-bottom: rem(40);
+}
+.rentals-list {
+    @include flex(row);
+    overflow-x: auto;
+    justify-content: space-between;
+    margin: 0 rem(-12);
+}
+
+.rental-item {
+    margin: 0 rem(12) rem(10);
+    @include flex(column);
+    min-width: rem(199);
+    // text-align: center;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.rental-item-img {
+    border-radius: rem(14.22);
+    width: 100%;
+    object-fit: cover;
+}
+
+.rental-item-title {
+    margin: rem(11) rem(10) rem(5.69);
+    font-size: rem(17.06);
+    line-height: rem(22.75);
+    color: $color-label;
+}
+
+.rental-item-des {
+    font-size: rem(12.8);
+    line-height: rem(17.06);
+    margin: 0 rem(10);
+    color: $color-neutral-700;
+}
+
+@include mq($BREAKPOINT-XL, min) {
+    .rental-item {
+        margin-right: rem(22.75);
+    }
+}
+@include mq($BREAKPOINT-XL, min) {
+    .rentals-list {
+        margin: 0 rem(-16);
+    }
+    .rental-item {
+        margin: 0 rem(16);
+        min-width: rem(280);
+    }
+
+    .rental-item-img {
+        border-radius: rem(20);
+    }
+
+    .rental-item-title {
+        margin: rem(16) rem(10) rem(8);
+        font-size: rem(24);
+        line-height: rem(32);
+    }
+
+    .rental-item-des{
+        font-size: rem(18);
+        line-height: rem(24);
+    }
+}

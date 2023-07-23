@@ -1,0 +1,6 @@
+mixin button(values={})
+    <button class="btn !{values.className}" type="!{values.type}"> !{values.value}
+    </button>
+
+mixin btn-link(values={})
+    <a href="!{values.href}" class="link !{values.className}">!{values.value}</a>

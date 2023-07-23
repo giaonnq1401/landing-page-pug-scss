@@ -1,0 +1,42 @@
+<section class="find-deals travelulu-container">
+    <h1 class="title find-deals-title">Find deals on hotels, homes and much more...</h1>
+    <form class="find-deals-form">
+
+        +select({
+            className: "input-location",
+            name: "location",
+            label: "Where are you going?",
+            option:[
+                {
+                    value: "newyork",
+                    text: "New York"
+                },
+                {
+                    value: "newyork",
+                    text: "New York"
+                }
+            ]
+        },)
+
+        +input({
+            className: "input-checkin",
+            type: "text",
+            name: "checkin",
+            placeholder: "Check-in - Check-out",
+            onfocus: "(this.type='date')",
+        })
+
+        +select({
+            className: "input-amount",
+            name: "amount",
+            label: "2 adults - 0 children",
+            option: []
+        })
+
+        +button({
+            className: "btn-primary find-deals-btn",
+            type: "submit",
+            value: "Search"
+        })
+    </form>
+</section>

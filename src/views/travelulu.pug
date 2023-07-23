@@ -1,0 +1,10 @@
+extends _layouts/layout-travelulu
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Travelulu";
+
+block container
+  include ./$components/travelulu/find-deal
+  include ./$components/travelulu/travelulu-main
+  include ./$components/travelulu/notification
+  include ./$components/travelulu/contact

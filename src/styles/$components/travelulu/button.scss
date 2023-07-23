@@ -1,0 +1,36 @@
+.btn, .link {
+    border-radius: rem(40);
+    display: grid;
+    align-items: center;
+    font-size: rem(16);
+    line-height: rem(18);
+    font-weight: 600;
+}
+
+.link {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: $color-travelulu-pink;
+    color: $color-travelulu-greyscale-1;
+    border: none;
+    min-height: rem(55);
+}
+
+.btn-secondary {
+    border: rem(2) solid $color-travelulu-greyscale-2;
+    color: $color-travelulu-greyscale-2;
+    background-color: transparent;
+    min-height: rem(64);
+}
+
+.btn-subtle {
+    color: $color-travelulu-default;
+    border: rem(2) solid $color-greyscale;
+    background-color: $color-white-1;
+    height: rem(40);
+    font-size: rem(14);
+    line-height: rem(24);
+    letter-spacing: rem(0.75);
+}

@@ -1,0 +1,35 @@
+-
+    const rentalData = [
+        {
+            src: "images/bindle/rentals-1.png",
+            alt: "rentals-1",
+            title: "Entire homes",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/rentals-2.png",
+            alt: "rentals-2",
+            title: "Cabins and cottages",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/rentals-3.png",
+            alt: "rentals-3",
+            title: "Unique stays",
+            properties: "156,786 properties"
+        },
+        {
+            src: "images/bindle/rentals-4.png",
+            alt: "rentals-4",
+            title: "Pets welcome",
+            properties: "156,786 properties",
+        },
+    ]
+
+<section class="bindle-container rentals">
+    <h2 class="title rentals-title">Explore more travel vacation rentals</h2>
+    <div class="rentals-list">
+        each item in rentalData
+            +rental-card(item)
+    </div>
+</section>

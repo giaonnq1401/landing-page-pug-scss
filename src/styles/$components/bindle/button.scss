@@ -1,0 +1,14 @@
+.btn {
+    min-width: rem(90);
+    padding: rem(10) rem(11);
+    @include flex(row);
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(7.5);
+
+    background-color: $color-white-1;
+    border: rem(1) solid $color-blue-1;
+    border-radius: rem(3);
+    color: $color-blue-1;
+    font-size: rem(10);
+}

@@ -1,0 +1,130 @@
+.featured-home-title {
+    margin-bottom: rem(8);
+}
+
+.featured-home-des {
+    color: $color-neutral-700;
+}
+
+.featured-btn {
+    display: none;
+}
+
+.featured-home-list {
+    @include flex(row);
+    overflow-x: auto;
+    margin: rem(30) rem(-11.5) 0;
+}
+
+.featured-home-item {
+    margin: 0 rem(11.5);
+    @include flex(column);
+    min-width: rem(206);
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.featured-item-img {
+    border-radius: rem(14.71);
+    width: 100%;
+    height: rem(154);
+    object-fit: cover;
+}
+
+.featured-item-rate {
+    @include flex(row);
+    gap: rem(6);
+    margin: rem(18) 0 rem(6) 0;
+    color: $color-neutral-700;
+    font-size: rem(12);
+    line-height: rem(16);
+    align-items: flex-end;
+}
+
+.featured-item-title {
+    font-size: rem(18);
+    line-height: rem(24);
+    font-weight: 500;
+    color: $color-label;
+}
+
+.featured-item-type {
+    margin: rem(5.88) 0;
+    color: $color-neutral-700;
+}
+
+.featured-item-cost {
+    color: $color-blue;
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: rem(24);
+}
+
+@include mq($BREAKPOINT-MD, min) {
+    .featured-home-header {
+        @include flex(row);
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .featured-btn {
+        display: flex;
+    }
+
+    .featured-home-list {
+        margin: rem(39.63) rem(-11.765) 0;
+    }
+
+    .featured-home-item {
+        margin: 0 rem(11.765);
+    }
+}
+
+@include mq($BREAKPOINT-XL, min) {
+    .featured-home-des {
+        font-size: rem(16);
+        line-height: rem(24);
+    }
+
+    .featured-home-list {
+        margin: rem(43) rem(-16) 0;
+    }
+
+    .featured-home-item {
+        margin: 0 rem(16);
+        min-width: rem(280);
+    }
+    
+    .featured-item-img {
+        border-radius: rem(20);
+        height: rem(210);
+    }
+
+    .featured-item-rate {
+        font-size: rem(14);
+        line-height: rem(20);
+    }
+
+    .rate-star {
+        width: rem(24);
+    }
+
+    .featured-item-title {
+        font-size: rem(24);
+        line-height: rem(32);
+        font-weight: 700;
+    }
+
+    .featured-item-type {
+        font-size: rem(18);
+        line-height: rem(24);
+        margin: rem(8) 0;
+    }
+
+    .featured-item-cost {
+        font-size: rem(24);
+        line-height: rem(32);
+    }
+}

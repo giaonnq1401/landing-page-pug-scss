@@ -1,0 +1,8 @@
+mixin nearby-card(values={})
+    <a href="#" class="nearby-card">
+        <img class="nearby-img" src=!{values.src} alt=!{values.alt} />
+        <div class="nearby-details">
+            <h3 class="nearby-location">!{values.location}</h3>
+            <span class="nearby-properties">!{values.properties}</span>
+        </div>
+    </a>

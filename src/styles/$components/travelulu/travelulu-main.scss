@@ -1,0 +1,46 @@
+.travelulu-main {
+    border-top: rem(1) solid $color-greyscale;
+    padding-top: rem(41);
+    margin-left: rem(130);
+    margin-right: rem(135);
+
+    @include flex(row);
+    align-items: flex-start;
+}
+
+.travelulu-found-title {
+    font-size: rem(32);
+    font-weight: 700;
+    line-height: rem(34);
+    margin-bottom: rem(35);
+}
+
+.travelulu-found {
+    width: 65.5%;
+}
+
+@include mq($BREAKPOINT-XL) {
+    .travelulu-main {
+        @include flex(column);
+        align-items: center;
+        margin: 0 auto ;
+        margin: 0 rem(135) rem(68) rem(138);
+    }
+
+    .travelulu-found {
+        width: 100%;
+    }
+}
+
+@include mq($BREAKPOINT-LG) {
+    .travelulu-main {
+        margin: 0 auto rem(68);
+    }
+}
+
+@include mq($BREAKPOINT-MD) {
+    .travelulu-found-title {
+        font-size: rem(24);
+        line-height: rem(32);
+    }
+}

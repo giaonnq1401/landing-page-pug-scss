@@ -1,0 +1,27 @@
+mixin accommodation-card(values={})
+    <div class="accommodation-card">
+        <a href="#" class="accommodation-img">
+            <img class="img-item" src="!{values.src}" alt="!{values.alt}" />
+            <img class="img-item img-mobile" src="images/travelulu/accommodation-1.png" alt="!{values.alt}" />
+        </a>
+        <div class="accommodation-content">
+            <ul class="accommodation-rating">
+                - for(var i = 0; i < values.star; i++)
+                    <li class="far fa-star star"></li>
+                - if(values.half)
+                    <li class="far fa-star half-star"></li>
+            </ul>
+
+            <a href="#"> <h1 class="accommodation-name">!{values.name}</h1> </a>
+            <p class="accommodation-des">!{values.des}</p>
+            <a class="accommodation-location" href="!{values.location}">
+                <img src="images/travelulu/icons/Location.svg" alt="location"/>Show on map
+            </a>
+            <p class="accommodation-des">!{values.locationDes}</p>
+        </div>
+        +btn-link({
+            href: "!{values.href}",
+            className: "btn-subtle booking-btn",
+            value: "Make a booking"
+        })
+    </div>

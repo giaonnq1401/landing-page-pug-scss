@@ -1,0 +1,17 @@
+mixin notify-thumbs-up(values={})
+    <div class="notify-card thumbs-up">
+        <div class="notify-card-content">
+            <img src="images/travelulu/icons/icon-thumbs-up.svg" alt="thumbs-up" />
+            <p class="notify-text">!{values.value}</p>
+        </div>
+        <img class="notify-close" src="images/travelulu/icons/icon-close.svg" alt="close" />
+    </div>
+
+mixin notify-alert(values={})
+    <div class="notify-card alert">
+        <div class="notify-card-content">
+            <img src="images/travelulu/icons/icon-alert.svg" alt="alert-info" />
+            <p class="notify-text">!{values.value}</p>
+        </div>
+        <img class="notify-close" src="images/travelulu/icons/icon-close.svg" alt="close" />
+    </div>

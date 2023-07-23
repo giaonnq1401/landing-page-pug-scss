@@ -1,0 +1,11 @@
+extends _layouts/layout-financial
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Financial";
+
+block container
+  include ./$components/financial/banner
+  include ./$components/financial/features
+  include ./$components/financial/about
+  include ./$components/financial/quality
+  include ./$components/financial/questions

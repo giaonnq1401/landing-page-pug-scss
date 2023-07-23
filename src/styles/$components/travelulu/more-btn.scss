@@ -1,0 +1,27 @@
+
+.more {
+    display: none;
+}
+
+
+@include mq($BREAKPOINT-XL) {
+    .more {
+        @include flex(row);
+        align-items: center;
+        width: 100%;
+    }
+
+    .more-btn {
+        width: rem(54);
+        margin: 0 rem(40);
+
+        cursor: pointer;
+    }
+    
+    .more-line {
+        width: calc(87.2% / 2);
+        height: 1px;
+        content: "";
+        border-bottom: rem(1) solid $color-greyscale;
+    }
+}
