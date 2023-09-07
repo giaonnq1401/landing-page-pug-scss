@@ -60,14 +60,14 @@ html(lang=$localeName, dir=dir)
         var data_filter = '{"price_config":{"min":"0","max":"10000"},"price_filter":[],"date_filter":null}';
 
   body(class=namespace)
-    if useHeader
-      include ../$modules/header
+    //- if useHeader
+    //-   include ../$modules/header
 
     main(role="main")
       block container
 
-    if useFooter
-      include ../$modules/footer
+    //- if useFooter
+    //-   include ../$modules/footer
 
     block scripts
       script.
